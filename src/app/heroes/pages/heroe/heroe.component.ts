@@ -8,16 +8,29 @@ import { Heroe } from '../../interfaces/heroes.interface';
   selector: 'app-heroe',
   templateUrl: './heroe.component.html',
   styles: [`
+    .container-medium{
+      width:50%;
+    }
     .container{
       display:flex;
-      flex-flow: row wrap;
+      flex-flow: row ;
       justify-content:start;
       gap: 30px;
     }
 
     img{
       width: 100%;
+      height: 50%;
       border-radius: 5px;
+    }
+
+    @media (max-width: 599px) {
+      .container {
+        display:flex;
+        flex-flow: column ;
+        justify-content:start;
+        gap: 30px;
+      }
     }
   `
   

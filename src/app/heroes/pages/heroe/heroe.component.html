@@ -10,13 +10,13 @@
 <ng-template #divHeroe>
     <div class="container">
 
-        <div fxFlex="50">
+        <div class="container-medium" >
             <h1>{{ heroe.superhero }} <small>- {{ heroe.alter_ego }}</small></h1>
             <mat-divider></mat-divider>
             <br>
             <img [src]="heroe | imagen">
         </div>
-        <div fxFlex="50">
+        <div class="container-medium">
             <h1>{{ heroe.publisher }}</h1>
             <mat-divider></mat-divider>
 
@@ -29,9 +29,7 @@
 
             <br>
 
-            <button mat-button 
-                    color="warn"
-                    (click)="regresar()">
+            <button mat-button color="warn" (click)="regresar()">
                 Regresar
             </button>
 
