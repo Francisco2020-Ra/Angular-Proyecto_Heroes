@@ -20,7 +20,7 @@ import { Heroe } from '../../interfaces/heroes.interface';
 
     img{
       width: 100%;
-      height: 50%;
+    
       border-radius: 5px;
     }
 
