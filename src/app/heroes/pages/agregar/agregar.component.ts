@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Heroe, Publisher } from '../../interfaces/heroes.interface';
+import { HeroesService } from '../../services/heroes.service';
 
 @Component({
   selector: 'app-agregar',
@@ -23,7 +24,21 @@ import { Heroe, Publisher } from '../../interfaces/heroes.interface';
     flex-direction: row;
     gap: 20px;
   }
- 
+  @media (max-width: 778px) {
+      .container {
+        display:flex;
+        flex-flow: column ;
+      }
+      .container-line{
+        display: flex;
+        flex-direction: column;
+      }
+      .container-field{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+      }
+    }
 `
   ]
 })
@@ -49,9 +64,17 @@ export class AgregarComponent implements OnInit {
     alt_img: '',
 
   }
-  constructor() { }
+  constructor(private heroeService: HeroesService) { }
 
   ngOnInit(): void {
+  }
+
+  guardar(){
+    if( this.heroe.superhero.trim().length === 0){
+      return;
+    }
+    this.heroeService.agregarHeroe(this.heroe)
+    .subscribe(resp => {console.log('Respuesta', resp)})
   }
 
 }
