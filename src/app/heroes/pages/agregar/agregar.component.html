@@ -1,1 +1,55 @@
-<p>agregar works!</p>
+<h1>Nuevo Heroe <small>asd</small></h1>
+
+<div class="container">
+    <div class="container-medium">
+
+        <div class="container-line">
+            <mat-form-field class="container-field">
+                <mat-label>Super Héroe</mat-label>
+                <input matInput type="text" required="true">
+            </mat-form-field>
+    
+            <mat-form-field class="container-field">
+                <mat-label>Alter Ego</mat-label>
+                <input matInput type="text" required="true">
+            </mat-form-field>            
+        </div>
+    
+
+        <mat-form-field class="container-field">
+            <mat-label>Primera Aparición</mat-label>
+            <input matInput type="text" required="true">
+        </mat-form-field>
+
+        <mat-form-field class="container-field">
+            <mat-label>Personajes</mat-label>
+            <input matInput type="text" required="true">
+        </mat-form-field>
+
+        <mat-form-field class="container-field">
+            <mat-label>Creador</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let publisher of publishers"
+                            [value]="publisher.id"> 
+                {{ publisher.desc }}                   
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="container-field">
+            <mat-label>Foto URL</mat-label>
+            <input matInput type="url" required="true">
+        </mat-form-field>
+
+        <br>
+
+        <button mat-raised-button color="primary" class="container-field">
+            <mat-icon>edit</mat-icon>
+            Guardar
+        </button>
+    </div>
+    <div class="container-medium">
+        <img [src]=" heroe | imagen">
+    </div>
+
+</div>
