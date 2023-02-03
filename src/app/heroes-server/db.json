@@ -175,6 +175,15 @@
       "publisher": "DC Comics",
       "alt_img": "",
       "id": "KANfpl4"
+    },
+    {
+      "superhero": "Robin",
+      "alter_ego": "r",
+      "characters": "robin",
+      "first_appearance": "f",
+      "publisher": "DC Comics",
+      "alt_img": "https://images.thequint.com/thequint/2021-08/0ac18e41-6847-435c-a107-f137bcaa44f3/https___hypebeast_com_image_2021_08_batman_urban_legends_robin_tim_drake_bisexual_reveal_info_000.jpg?rect=0%2C0%2C960%2C540&auto=format%2Ccompress&fmt=webp&w=1200",
+      "id": "dwe7x_4"
     }
   ]
 }

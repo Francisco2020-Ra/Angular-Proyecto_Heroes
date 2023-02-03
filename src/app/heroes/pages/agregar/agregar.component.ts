@@ -8,6 +8,10 @@ import { switchMap } from 'rxjs';
   selector: 'app-agregar',
   templateUrl: './agregar.component.html',
   styles: [`
+  img{
+    width: 100%;
+    border-radius: 5px;
+  }
   .container{
     display:flex;
     flex-direction: row;
@@ -71,12 +75,13 @@ export class AgregarComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-
-    this.activatedRoute.params
-    .pipe(
-      switchMap( ({id}) => this.heroeService.getHeroesPorId(id) )
-    )
-    .subscribe( heroe => this.heroe = heroe );
+    if(this.router.url.includes('editar')){
+        this.activatedRoute.params
+      .pipe(
+        switchMap( ({id}) => this.heroeService.getHeroesPorId(id) )
+      )
+      .subscribe( heroe => this.heroe = heroe );
+    }
   }
 
   guardar(){
