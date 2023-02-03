@@ -43,10 +43,23 @@
 
         <br>
 
-        <button mat-raised-button color="primary" class="container-field" (click)="guardar()">
-            <mat-icon>edit</mat-icon>
-            Guardar
-        </button>
+        <div style="display: flex;">
+            <button mat-raised-button color="primary" (click)="guardar()">
+                <mat-icon>edit</mat-icon>
+                Guardar
+            </button>
+
+            <span class="spacer"></span>
+       
+            <button *ngIf="heroe.id"
+                    mat-raised-button
+                    (click)="borrarHeroe()"
+                    color="warn">
+                <mat-icon>remove</mat-icon>
+                Borrar
+            </button>
+        </div>
+
     </div>
     <div class="container-medium">
         <img [src]=" heroe | imagen">
