@@ -28,6 +28,8 @@ export class HomeComponent implements OnInit {
 
   logout(){
 
+    this.authServices.logout();
+
     this.rourter.navigate(['./auth'])
   }
 }
